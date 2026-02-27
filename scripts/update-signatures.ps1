@@ -61,7 +61,7 @@ foreach ($mailbox in $mailboxes) {
         -SignatureText $null
 }
 
-Get-MailboxMessageConfiguration -Identity $email | 
+Get-MailboxMessageConfiguration -Identity fportes@summitcare.com | 
 Select AutoAddSignature, AutoAddSignatureOnReply
 
 Disconnect-ExchangeOnline -Confirm:$false
