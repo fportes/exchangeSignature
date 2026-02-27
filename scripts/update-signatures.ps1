@@ -57,7 +57,7 @@ foreach ($mailbox in $mailboxes) {
         -Identity $email `
         -SignatureHtml $signature `
         -AutoAddSignature $true `
-        -AutoAddSignatureOnReply $true
+        -AutoAddSignatureOnReply $true `
         -SignatureText $null
 }
 
