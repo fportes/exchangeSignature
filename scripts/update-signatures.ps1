@@ -58,6 +58,10 @@ foreach ($mailbox in $mailboxes) {
         -SignatureHtml $signature `
         -AutoAddSignature $true `
         -AutoAddSignatureOnReply $true
+        -SignatureText $null
 }
+
+Get-MailboxMessageConfiguration -Identity $email | 
+Select AutoAddSignature, AutoAddSignatureOnReply
 
 Disconnect-ExchangeOnline -Confirm:$false
